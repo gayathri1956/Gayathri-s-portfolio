@@ -1,0 +1,79 @@
+import { ExternalLink, Clock } from "lucide-react";
+const Portfolio = () => {
+  return <div className="bg-background text-foreground min-h-screen py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-6xl font-display font-light mb-16 text-center tracking-wide animate-fade-in-up text-gradient">
+          What I'm Working On
+        </h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Kids Learning App */}
+          <div className="group animate-fade-in-up bg-gradient-to-br from-platinum-900/50 to-background border border-platinum-800 p-8 hover:border-electric-400/20 transition-all duration-500 hover:scale-105 hover:glow-electric" style={{
+          animationDelay: '0.2s'
+        }}>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-display font-light text-electric-300">Kids Learning App</h3>
+              <div className="flex items-center text-amber-400">
+                <Clock className="w-4 h-4 mr-2" />
+                <span className="text-sm">Ongoing</span>
+              </div>
+            </div>
+            
+            <p className="text-platinum-300 mb-6 leading-relaxed">
+              A playful and educational application designed for kids aged 5 and below. 
+              Combines interactive learning with modern AI technologies to create engaging educational experiences.
+            </p>
+            
+            
+            
+            <button className="w-full py-3 border border-platinum-600 text-platinum-400 hover:border-electric-400 hover:text-electric-300 transition-all duration-300 cursor-not-allowed">
+              <ExternalLink className="w-4 h-4 inline mr-2" />
+              In Development
+            </button>
+          </div>
+          
+          {/* Portfolio Website */}
+          <div className="group animate-fade-in-up bg-gradient-to-br from-platinum-900/50 to-background border border-platinum-800 p-8 hover:border-electric-400/20 transition-all duration-500 hover:scale-105 hover:glow-electric" style={{
+          animationDelay: '0.4s'
+        }}>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-display font-light text-electric-300">Portfolio Website</h3>
+              <div className="w-3 h-3 bg-green-400 rounded-full glow-green"></div>
+            </div>
+            
+            <p className="text-platinum-300 mb-6 leading-relaxed">
+              A modern, elegant portfolio website showcasing my journey, skills, and aspirations. 
+              Built with focus on user experience and accessibility.
+            </p>
+            
+            <div className="mb-6">
+              <div className="flex flex-wrap gap-2">
+                {['React', 'TypeScript', 'Tailwind CSS'].map((tech, i) => (
+                  <span key={i} className="px-4 py-2 bg-electric-500/10 text-electric-300 text-sm border border-electric-500/20 rounded-md">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <button className="w-full py-3 border border-electric-400 text-electric-300 hover:bg-electric-400 hover:text-background transition-all duration-300 glow-electric-hover">
+              <ExternalLink className="w-4 h-4 inline mr-2" />
+              Live Project
+            </button>
+          </div>
+          
+          {/* Future Projects Placeholder */}
+          <div className="group animate-fade-in-up bg-gradient-to-br from-platinum-900/30 to-background border border-platinum-700 border-dashed p-8 text-center hover:glow-electric" style={{
+          animationDelay: '0.6s'
+        }}>
+            <div className="text-6xl mb-6 opacity-20 text-electric-400">+</div>
+            <h3 className="text-xl font-display font-light text-platinum-400 mb-4">More Projects Coming Soon</h3>
+            <p className="text-platinum-500 text-sm">
+              Exciting AI/ML projects and web applications in the pipeline
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>;
+};
+export default Portfolio;
