@@ -130,7 +130,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <footer className="py-16 px-6 border-t border-platinum-800/50 bg-background">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-platinum-400 font-light tracking-wide text-lg">
-            © 2024 <span className="text-electric-400 font-medium">Lingampalli Gayathri Lakshmi Chandrakala</span>. Crafted with passion.
+            © 2026 <span className="text-electric-400 font-medium">Lingampalli Gayathri Lakshmi Chandrakala</span>. Crafted with passion.
           </p>
         </div>
       </footer>
