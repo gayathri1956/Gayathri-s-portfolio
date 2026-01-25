@@ -15,12 +15,18 @@ const Skills = () => {
       title: "Web & AI Technologies",
       icon: Zap,
       skills: [
+        { name: 'HTML', level: 85, color: 'from-orange-400 to-red-500' },
+        { name: 'CSS', level: 80, color: 'from-blue-400 to-indigo-500' },
         { name: 'Web Development', level: 80, color: 'from-purple-500 to-pink-500' },
+        { name: 'React JS (Basic)', level: 60, color: 'from-cyan-400 to-blue-500' },
+        { name: 'MongoDB (Basic)', level: 55, color: 'from-green-500 to-emerald-600' },
+        { name: 'DBMS', level: 70, color: 'from-purple-500 to-violet-600' },
         { name: 'Suno AI', level: 70, color: 'from-indigo-500 to-blue-500' },
         { name: 'Polo AI', level: 70, color: 'from-teal-500 to-emerald-500' }
       ]
     }
   ];
+
 
   const softSkills = [
     { name: 'Teamwork', description: 'Collaborative problem-solving' },

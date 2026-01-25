@@ -90,11 +90,9 @@ const About = () => {
           <h3 className="text-4xl font-display font-medium mb-16 text-center tracking-wide text-gradient glow-text">Certifications</h3>
           <div className="grid md:grid-cols-2 gap-10">
             {[
-              "Web Development Course with Live Projects (Ajjhub and Sapienz Recruit)",
-              "MS Office (Stepping Stones)",
-              "Introduction to C (Stepping Stones)",
-              "Introduction to Prompt Engineering (Simplilearn)",
-              "Introduction to Internet of Things (NPTEL Online Certification)"
+              "Salesforce Certified Agentforce Specialist",
+  "Angular (OnWingspan)",
+  "Introduction to Internet of Things (NPTEL Online Certification)"
             ].map((cert, index) => (
               <div key={index} className="p-8 border border-platinum-800/50 bg-gradient-to-br from-platinum-900/20 to-background hover:border-electric-500/30 transition-all duration-500 rounded-xl card-glow">
                 <p className="text-platinum-200 text-xl font-light leading-relaxed">{cert}</p>
