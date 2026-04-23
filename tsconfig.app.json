@@ -21,10 +21,14 @@
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
 
-    "baseUrl": ".",
+    /* Path Aliases */
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["src/*"]
+    },
+
+    /* Silence deprecation warnings */
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src"]
 }
