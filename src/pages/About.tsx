@@ -1,7 +1,22 @@
-
 import { GraduationCap, Award, Book, Video, Code2 } from "lucide-react";
 
+import oracle from "../assets/oracle.jpg";
+import salesforce from "../assets/salesforce.jpg";
+import prompt from "../assets/prompt-engineering.jpg";  // make sure file is renamed correctly
+import angular from "../assets/angular.jpg";
+import webdev from "../assets/webdevelopment.png";      // ensure exact spelling
+import iot from "../assets/iot.jpg";
+
 const About = () => {
+  const certificates = [
+    { name: "Oracle Fusion AI Agent Studio Foundations Associate – Oracle, 2026", file: oracle },
+    { name: "Salesforce Agentforce Specialist Certification – Trailhead, 2025", file: salesforce },
+    { name: "Introduction to Prompt Engineering – Simplilearn, 2025", file: prompt },
+    { name: "Angular Course – Infosys Springboard, 2025", file: angular },
+    { name: "Web Development with Live Projects – Ajjhub & Sapienz Recruit, 2025", file: webdev },
+    { name: "Introduction to Internet of Things – NPTEL Online Certification, 2024", file: iot },
+  ];
+
   return (
     <div className="bg-background text-foreground min-h-screen py-32 px-6">
       <div className="max-w-7xl mx-auto">
@@ -9,8 +24,8 @@ const About = () => {
           About <span className="text-gradient glow-text">Me</span>
         </h2>
         
+        {/* Quote + Bio */}
         <div className="grid md:grid-cols-2 gap-20 mb-24">
-          {/* Left Column - Quote/Image */}
           <div className="animate-fade-in-left">
             <div className="bg-gradient-to-br from-platinum-900/30 to-background p-16 border border-platinum-800/50 h-full flex items-center justify-center rounded-2xl card-glow">
               <blockquote className="text-2xl md:text-4xl font-display font-light italic text-center leading-relaxed text-platinum-200">
@@ -19,7 +34,6 @@ const About = () => {
             </div>
           </div>
           
-          {/* Right Column - Bio */}
           <div className="animate-fade-in-right space-y-10">
             <div>
               <h3 className="text-3xl font-display font-medium mb-8 tracking-wide text-electric-400 glow-text">Personal Journey</h3>
@@ -46,27 +60,9 @@ const About = () => {
           <h3 className="text-4xl font-display font-medium mb-16 text-center tracking-wide text-gradient glow-text">Educational Timeline</h3>
           <div className="space-y-10">
             {[
-              {
-                period: "2023 - 2027",
-                title: "B.Tech in Computer Science (AI/ML)",
-                institution: "Sri Vasavi Engineering College",
-                grade: "CGPA: 7.6",
-                icon: GraduationCap
-              },
-              {
-                period: "2021 - 2023",
-                title: "Intermediate Education",
-                institution: "Sri Chaitanya Junior College",
-                grade: "93%",
-                icon: Book
-              },
-              {
-                period: "2021",
-                title: "Secondary School Certificate",
-                institution: "Sri Chaitanya School",
-                grade: "586/600",
-                icon: Award
-              }
+              { period: "2023 - 2027", title: "B.Tech in Computer Science (AI/ML)", institution: "Sri Vasavi Engineering College", grade: "CGPA: 7.6", icon: GraduationCap },
+              { period: "2021 - 2023", title: "Intermediate Education", institution: "Sri Chaitanya Junior College", grade: "93%", icon: Book },
+              { period: "2021", title: "Secondary School Certificate", institution: "Sri Chaitanya School", grade: "586/600", icon: Award },
             ].map((item, index) => (
               <div key={index} className="flex items-start space-x-8 p-8 border-l-2 border-electric-500/30 hover:border-electric-400/50 transition-colors duration-500 bg-gradient-to-r from-platinum-900/10 to-transparent rounded-r-lg">
                 <div className="w-16 h-16 bg-electric-500/10 rounded-full flex items-center justify-center flex-shrink-0 border border-electric-500/20">
@@ -89,13 +85,11 @@ const About = () => {
         <div className="mb-24 animate-fade-in-up">
           <h3 className="text-4xl font-display font-medium mb-16 text-center tracking-wide text-gradient glow-text">Certifications</h3>
           <div className="grid md:grid-cols-2 gap-10">
-            {[
-              "Salesforce Certified Agentforce Specialist",
-  "Angular (OnWingspan)",
-  "Introduction to Internet of Things (NPTEL Online Certification)"
-            ].map((cert, index) => (
+            {certificates.map((cert, index) => (
               <div key={index} className="p-8 border border-platinum-800/50 bg-gradient-to-br from-platinum-900/20 to-background hover:border-electric-500/30 transition-all duration-500 rounded-xl card-glow">
-                <p className="text-platinum-200 text-xl font-light leading-relaxed">{cert}</p>
+                <a href={cert.file} target="_blank" rel="noopener noreferrer" className="text-platinum-200 text-xl font-light leading-relaxed hover:text-electric-400 hover:underline">
+                  {cert.name}
+                </a>
               </div>
             ))}
           </div>
@@ -108,7 +102,7 @@ const About = () => {
             {[
               { icon: Book, title: "Reading", desc: "Tech & self-help books" },
               { icon: Video, title: "Learning", desc: "Motivational videos" },
-              { icon: Code2, title: "Coding", desc: "Small projects & experiments" }
+              { icon: Code2, title: "Coding", desc: "Small projects & experiments" },
             ].map((interest, index) => (
               <div key={index} className="text-center p-10 border border-platinum-800/50 bg-gradient-to-br from-platinum-900/20 to-background hover:border-electric-500/30 transition-all duration-500 hover:scale-105 rounded-xl card-glow">
                 <div className="w-20 h-20 bg-electric-500/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-electric-500/20">
