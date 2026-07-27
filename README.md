@@ -1,0 +1,27 @@
+# My Portfolio
+
+A modern, responsive portfolio website showcasing my work, skills, and learning journey.
+
+## 🚀 Tech Stack
+
+This project is built using the following technologies:
+
+* **Framework:** [React](https://reactjs.org/) (with TypeScript)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+* **Icons:** [Lucide React](https://lucide.dev/)
+
+## 📂 Project Structure
+
+* `src/components`: Reusable UI components (Navbar, Footer, Section cards).
+* `src/pages`: Main page layouts and section content.
+* `src/hooks`: Custom React hooks for logic and state.
+
+## 🛠️ Local Development
+
+To get this project running locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
